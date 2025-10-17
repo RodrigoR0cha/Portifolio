@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+}
+
+.header .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding-top: 1rem;
+}
+
+.header .title {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+body {
+    background-color: #5e5e5e;
+    color: #fff;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.information p {
+    margin: .5rem;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.information p::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 1rem;
+}
+
+.information .person::before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 1rem;
+    background-image: url(/assets/img/icons/person.png);
+}
+
+.information .maps::before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 1rem;
+    background-image: url(/assets/img/icons/maps.png);
+}
+
+.information .whatsapp::before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 1rem;
+    background-image: url(/assets/img/icons/whatsapp.png);
+}
+
+.information .email::before {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 1rem;
+    background-image: url(/assets/img/icons/email.png);
+}
+
+/* Acordion */
+
+/* Estilos básicos para o contêiner */
+.accordion {
+  max-width: 1200px;
+  margin: 30px 70px 30px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden; /* Importante para a animação */
+}
+
+/* Esconde a caixa de seleção nativa */
+.accordion-toggle {
+  display: none;
+}
+
+/* Estilo do título/rótulo */
+.accordion-title {
+  display: block;
+  padding: 15px 20px;
+  background-color: #f4f4f4;
+  color: #000;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+/* Adiciona um ícone ao lado do título */
+.accordion-title::after {
+  content: '+';
+  position: relative;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+/* Estilo do conteúdo */
+.accordion-content {
+  background-color: #fff;
+  max-height: 0; /* Começa com altura zero */
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Transição suave */
+}
+
+.accordion-content p {
+  padding: 15px 20px;
+  margin: 15;
+  color: #000;
+}
+
+/* Expande o conteúdo quando a checkbox está checada */
+.accordion-toggle:checked ~ .accordion-content {
+  max-height: 200px; /* Valor arbitrário para mostrar o conteúdo */
+  padding: 15px 20px;
+}
+
+/* Rotaciona o ícone quando o item está aberto */
+.accordion-toggle:checked + .accordion-title::after {
+  content: '-';
+  transform: translateY(-50%) rotate(0deg);
+}
+
+/* A parti daqui responsividade com o uso de @media query*/
+
+@media only screen and (min-width: 768px){
+
+    .header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding-top: 1rem;
+}
+
+.header .title {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+
+    
+}
